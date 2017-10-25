@@ -20,7 +20,14 @@ public class SignInTest {
         driver.findElement(By.linkText("Your trips")).click();
         driver.findElement(By.id("SignIn")).click();
 
-        driver.findElement(By.id("signInButton")).click();
+        waitFor(10000);
+        try{
+        	driver.switchTo().frame("modal_window");
+        	driver.findElement(By.id("signInButton")).click();
+        }
+        catch(Exception e){
+         	System.out.println("Unable to click on Sign in button : "+e);
+        }
 
         String errors1 = driver.findElement(By.id("errors1")).getText();
         Assert.assertTrue(errors1.contains("There were errors in your submission"));
