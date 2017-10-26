@@ -9,13 +9,13 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.List;
-
-public class FlightBookingTest {
+//Create a class DriverPathwith the reusble method setDriverPath
+public class FlightBookingTest extends DriverPath {
 
      WebDriver driver ;
 	    @BeforeClass
 	    public void initialize(){
-	  	  setDriverPath();
+	  	  DriverPath.setDriverPath();
 	          driver = new ChromeDriver();
 	    }
 
@@ -79,15 +79,4 @@ public class FlightBookingTest {
         }
     }
 
-    private void setDriverPath() {
-        if (PlatformUtil.isMac()) {
-            System.setProperty("webdriver.chrome.driver", "chromedriver");
-        }
-        if (PlatformUtil.isWindows()) {
-            System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-        }
-        if (PlatformUtil.isLinux()) {
-            System.setProperty("webdriver.chrome.driver", "chromedriver_linux");
-        }
-    }
-}
+  }
