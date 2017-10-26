@@ -59,17 +59,7 @@ public class FlightBookingTest extends DriverPath {
         driver.quit();
 
     }
-
-
-    private void waitFor(int durationInMilliSeconds) {
-        try {
-            Thread.sleep(durationInMilliSeconds);
-        } catch (InterruptedException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        }
-    }
-
-
+//Moved reusable waitFor() to DriverPath class
     private boolean isElementPresent(By by) {
         try {
             driver.findElement(by);
