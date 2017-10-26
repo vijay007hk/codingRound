@@ -1,0 +1,5 @@
+1. Create a new class called DriverPath and move the reusables like waitFor()
+and setDriverPath() into this class.Make these methods as Protected and Static
+
+2. Add annotation @BeforeClass for all tests, move the initialization steps in here,
+like setDriverPath() and initializing to chromedriver.
