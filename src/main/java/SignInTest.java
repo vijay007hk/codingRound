@@ -36,13 +36,5 @@ public class SignInTest extends DriverPath{
         Assert.assertTrue(errors1.contains("There were errors in your submission"));
         driver.quit();
     }
-
-    private void waitFor(int durationInMilliSeconds) {
-        try {
-            Thread.sleep(durationInMilliSeconds);
-        } catch (InterruptedException e) {
-            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-        }
-    }
-
+   
 }
