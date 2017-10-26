@@ -3,3 +3,6 @@ and setDriverPath() into this class.Make these methods as Protected and Static
 
 2. Add annotation @BeforeClass for all tests, move the initialization steps in here,
 like setDriverPath() and initializing to chromedriver.
+
+3. Created a Data.properties Property file and move all hard-coded data into this file.
+Make this framework data-driven in this way.
