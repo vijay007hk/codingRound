@@ -32,6 +32,7 @@ public class HotelBookingTest extends DriverPath{
     public void shouldBeAbleToSearchForHotels() {
        
         driver.get("https://www.cleartrip.com/");
+	    waitFor(5000);
         hotelLink.click();
 
         localityTextBox.sendKeys("Indiranagar, Bangalore");
