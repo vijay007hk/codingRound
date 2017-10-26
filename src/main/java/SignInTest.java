@@ -14,7 +14,7 @@ public class SignInTest extends DriverPath{
 	
     WebDriver driver ;
     static String url;
-	static String signinerror;
+    static String signinerror;
     static{
     try {
 		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\TestVagrant\\Hotels\\Data.properties");
@@ -30,7 +30,7 @@ public class SignInTest extends DriverPath{
    }
     
     @BeforeClass
-    public void initialize() throws IOException{
+    public void initialize(){
     	DriverPath.setDriverPath();
         driver = new ChromeDriver();
     }
